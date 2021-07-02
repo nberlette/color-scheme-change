@@ -1,20 +1,17 @@
 {
   "name": "color-scheme-change",
   "description": "Detect system color scheme changes on the web (Dark Mode)",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "author": {
-    "name": "Feross Aboukhadijeh",
-    "email": "feross@feross.org",
-    "url": "https://feross.org/"
+    "name": "Nicholas Berlette",
+    "email": "nick@berlette.com",
+    "url": "https://berlette.com"
   },
   "bugs": {
-    "url": "https://github.com/feross/color-scheme-change/issues"
+    "url": "https://github.com/nberlette/color-scheme-change/issues"
   },
   "dependencies": {},
-  "devDependencies": {
-    "standard": "*"
-  },
-  "homepage": "https://github.com/feross/color-scheme-change",
+  "homepage": "https://github.com/nberlette/color-scheme-change",
   "keywords": [
     "color scheme",
     "dark mode",
@@ -31,9 +28,16 @@
   "main": "index.js",
   "repository": {
     "type": "git",
-    "url": "git://github.com/feross/color-scheme-change.git"
+    "url": "git://github.com/nberlette/color-scheme-change.git"
   },
-  "scripts": {
-    "test": "standard"
+  "type": "module",
+  "files": [
+    "index.js",
+    "index.cjs"
+  ],
+  "exports": {
+    "import": "index.js",
+    "default": "index.js",
+    "require": "index.cjs"
   }
 }
