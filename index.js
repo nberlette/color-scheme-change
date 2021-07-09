@@ -1,7 +1,11 @@
 'use strict'
 
 function colorSchemeChange (onChange) {
-  const context = typeof window !== undefined ? window : global
+  if (window === undefined || !window || typeof(window) === undefined) {
+    const context = global
+  } else {
+    const context = window
+  }
   const media = context.matchMedia('(prefers-color-scheme: dark)')
   handleChange()
 
