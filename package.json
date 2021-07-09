@@ -2,7 +2,7 @@
   "name": "@nberlette/color-scheme-change",
   "private": false,
   "description": "Detect system color scheme changes on the web (Dark Mode)",
-  "version": "1.1.1",
+  "version": "1.2.0",
   "author": {
     "name": "Nicholas Berlette",
     "email": "nick@berlette.com",
@@ -36,9 +36,10 @@
     "index.cjs"
   ],
   "exports": {
-    "import": "index.js",
-    "default": "index.js",
-    "require": "index.cjs"
+    "import": "./index.js",
+    "default": "./index.js",
+    "require": "./index.cjs"
   },
-  "readme": "https://github.com/nberlette/color-scheme-change#readme"
+  "readme": "https://github.com/nberlette/color-scheme-change#readme",
+  "runkitExampleFilename": "example.cjs"
 }

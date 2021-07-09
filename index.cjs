@@ -1,6 +1,5 @@
 'use strict'
 
-// originally by @feross, modified by @nberlette
 function colorSchemeChange (onChange) {
   const media = window.matchMedia('(prefers-color-scheme: dark)')
   handleChange()
