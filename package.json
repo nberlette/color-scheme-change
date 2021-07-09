@@ -30,16 +30,16 @@
     "type": "git",
     "url": "git://github.com/nberlette/color-scheme-change.git"
   },
-  "type": "module",
+  "type": "commonjs",
   "files": [
     "index.js",
-    "index.cjs"
+    "index.mjs"
   ],
   "exports": {
-    "import": "./index.js",
+    "import": "./index.mjs",
     "default": "./index.js",
-    "require": "./index.cjs"
+    "require": "./index.js"
   },
   "readme": "https://github.com/nberlette/color-scheme-change#readme",
-  "runkitExampleFilename": "example.cjs"
+  "runkitExampleFilename": "./example.js"
 }

@@ -1,5 +1,3 @@
-'use strict'
-
 function colorSchemeChange (onChange) {
   const media = window.matchMedia('(prefers-color-scheme: dark)')
   handleChange()
@@ -20,4 +18,4 @@ function colorSchemeChange (onChange) {
   }
 }
 
-module.exports = colorSchemeChange
+export { colorSchemeChange }
