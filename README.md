@@ -1,17 +1,19 @@
 
-# `@nberlette/color-scheme-change`
+# 📦 `@nberlette/color-scheme-change`
 
-Detect when a user's system color scheme has changed, so you can serve up a different theme on your site to make them feel right at home.
+Detect when a user's system color scheme has changed, allowing your site to change virtually simultaneously, making them feel right at home.
 
-Implementing it is easy and takes only a few seconds, but you can try it on RunKit if you want a sample!
+Setup and implementatio only takes a minute or two. You can try it on RunKit if you want a sample!
 
 - - -
 
-## Installation
+### 💿 Installation [![npm install @nberlette/color-scheme-change][npm-image]][npm-url]  
+
+--- 
 
 <div style="width: 49%; float: left;">
 
-```sh
+```bash
 yarn add @nberlette/color-scheme-change
 ```
 
@@ -19,27 +21,17 @@ yarn add @nberlette/color-scheme-change
 
 <div style="margin-left: 51%;">
 
-```sh
+```bash
 npm install --save @nberlette/color-scheme-change
 ```
-
-<!-- [![npm install @nberlette/color-scheme-change][npm-image]][npm-url] -->
-
+  
 </div>
 
-> I highly recommend switching to Yarn for your package management if you haven't already.
+**I highly recommend switching to [Yarn](https://yarnpkg.com) for your package management if you haven't already.**
 
 <br clear="all">
 
-## CommonJS Usage (Node.js)
-
-```js
-const { colorSchemeChange } = require('@nberlette/color-scheme-change')
-
-colorSchemeChange(theme => console.log(`User's color scheme: ${theme}`))
-```
-
-## ES6 Usage (browser)
+## 🟨 ES6 Usage (browser)
 
 ```js
 import { colorSchemeChange } from '@nberlette/color-scheme-change'
@@ -47,7 +39,16 @@ import { colorSchemeChange } from '@nberlette/color-scheme-change'
 colorSchemeChange(theme => console.log(`User's color scheme: ${theme}`))
 ```
 
-## [Try it on RunKit!][runkit-url]
+
+## 🟩 CommonJS Usage (Node.js)
+
+```js
+const { colorSchemeChange } = require('@nberlette/color-scheme-change')
+
+colorSchemeChange(theme => console.log(`User's color scheme: ${theme}`))
+```
+
+## 🟪 [Try it on RunKit!][runkit-url]
 
 [![Try @nberlette/color-scheme-change on RunKit][runkit-image]][runkit-url]
 
@@ -82,9 +83,7 @@ scheme changes.
 
 - - -
 
-### Licensed under MIT. Copyright (c) [Nicholas Berlette](https://berlette.com)  
-
-##### Original copyright (c) [Feross Aboukhadijeh](https://feross.org)  
+### MIT © 2021 [Nicholas Berlette](https://berlette.com) • original by [@feross](https://feross.org)  
 
 [npm-image]: https://nodei.co/npm/@nberlette/color-scheme-change.png?mini=true
 [npm-url]: https://npmjs.org/package/@nberlette/color-scheme-change
