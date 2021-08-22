@@ -7,13 +7,13 @@ Setup and implementatio only takes a minute or two. You can try it on RunKit if 
 
 - - -
 
-### 💿 Installation [![npm install @nberlette/color-scheme-change][npm-image]][npm-url]  
+## 💿 Installation
 
---- 
+  [![yarn add @nberlette/color-scheme-change][yarn-image]](https://yarnpkg.com/packages/@nberlette/color-scheme-change) [![npm install @nberlette/color-scheme-change][npm-image]][npm-url]
 
 <div style="width: 49%; float: left;">
 
-```bash
+```sh
 yarn add @nberlette/color-scheme-change
 ```
 
@@ -21,15 +21,18 @@ yarn add @nberlette/color-scheme-change
 
 <div style="margin-left: 51%;">
 
-```bash
+```sh
 npm install --save @nberlette/color-scheme-change
 ```
-  
+
+<!-- [![npm install @nberlette/color-scheme-change][npm-image]][npm-url] -->
+
 </div>
 
-**I highly recommend switching to [Yarn](https://yarnpkg.com) for your package management if you haven't already.**
+> I highly recommend switching to Yarn for your package management if you haven't already.
 
 <br clear="all">
+
 
 ## 🟨 ES6 Usage (browser)
 
@@ -85,7 +88,10 @@ scheme changes.
 
 ### MIT © 2021 [Nicholas Berlette](https://berlette.com) • original by [@feross](https://feross.org)  
 
-[npm-image]: https://nodei.co/npm/@nberlette/color-scheme-change.png?mini=true
+<!-- [npm-image]: https://nodei.co/npm/@nberlette/color-scheme-change.png?mini=true -->
+[npm-image]: https://img.shields.io/badge/npm%20install%20-%20init%E2%80%90package%E2%80%90json-red?style=for-the-badge&logo=npm
 [npm-url]: https://npmjs.org/package/@nberlette/color-scheme-change
-[runkit-image]: https://badge.runkitcdn.com/@nberlette/color-scheme-change.svg
+[yarn-image]: https://img.shields.io/badge/yarn%20add-%40nberlette%2Fcolor--scheme--change-9cf?labelColor=444444&logo=yarn&style=for-the-badge
+[runkit-image]: https://img.shields.io/badge/try%20on%20runkit-%40nberlette%2Fcolor--scheme--change-ff69b4?style=for-the-badge&logo=runkit&logoColor=ff69b4
+<!-- https://badge.runkitcdn.com/@nberlette/color-scheme-change.svg --> -->
 [runkit-url]: https://npm.runkit.com/@nberlette/color-scheme-change
