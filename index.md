@@ -1,37 +1,90 @@
-## Welcome to GitHub Pages
 
-You can use the [editor on GitHub](https://github.com/nberlette/color-scheme-change/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
+# 📦 `@nberlette/color-scheme-change`
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+Detect when a user's system color scheme has changed, allowing your site to change virtually simultaneously, making them feel right at home.
 
-### Markdown
+Setup and implementatio only takes a minute or two. You can try it on RunKit if you want a sample!
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+- - -
 
-```markdown
-Syntax highlighted code block
+## 💿 Installation
 
-# Header 1
-## Header 2
-### Header 3
+<div style="width: 49%; float: left;">
 
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
+```sh
+yarn add @nberlette/color-scheme-change
 ```
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
+</div>
 
-### Jekyll Themes
+<div style="margin-left: 51%;">
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/nberlette/color-scheme-change/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+```sh
+npm install --save @nberlette/color-scheme-change
+```
 
-### Support or Contact
+<!-- [![npm install @nberlette/color-scheme-change][npm-image]][npm-url] -->
 
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+</div>
+
+> I highly recommend switching to Yarn for your package management if you haven't already.
+
+<br clear="all">
+
+## 🟩 CommonJS Usage (Node.js)
+
+```js
+const { colorSchemeChange } = require('@nberlette/color-scheme-change')
+
+colorSchemeChange(theme => console.log(`User's color scheme: ${theme}`))
+```
+
+## 🟨 ES6 Usage (browser)
+
+```js
+import { colorSchemeChange } from '@nberlette/color-scheme-change'
+
+colorSchemeChange(theme => console.log(`User's color scheme: ${theme}`))
+```
+
+## 🟪 [Try it on RunKit!][runkit-url]
+
+[![Try @nberlette/color-scheme-change on RunKit][runkit-image]][runkit-url]
+
+- - -
+
+## API
+
+<details>
+<summary><code>remove = colorSchemeChange(onChange)</code></summary>
+
+Listen for changes to the system color scheme in the web browser. Detect when
+the system switches between Light Mode and Dark Mode.
+</details>
+
+<details>
+<summary><code>onChange</code></summary>
+
+A callback function of the following interface: `function(colorScheme) {}` where
+`colorScheme` is either `'light'` or `'dark'`. The function is called whenever
+the system enters Light Mode or Dark Mode, respectively.
+
+</details>
+
+<details>
+<summary><code>remove</code></summary>
+
+When the returned `remove` function is called, all event listeners are cleaned
+up and the `onChange` function will no longer be called when the system color
+scheme changes.
+
+</details>
+
+- - -
+
+### MIT © 2021 [Nicholas Berlette](https://berlette.com) • original by [@feross](https://feross.org)  
+
+[npm-image]: https://nodei.co/npm/@nberlette/color-scheme-change.png?mini=true
+[npm-url]: https://npmjs.org/package/@nberlette/color-scheme-change
+[runkit-image]: https://badge.runkitcdn.com/@nberlette/color-scheme-change.svg
+[runkit-url]: https://npm.runkit.com/@nberlette/color-scheme-change
