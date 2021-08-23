@@ -1,65 +1,121 @@
 
-# 📦 `@nberlette/color-scheme-change`
+<h1 align="center">
 
-Detect when a user's system color scheme has changed, allowing your site to change virtually simultaneously, making them feel right at home.
+  <code> 📦  @nberlette/color-scheme-change</code>
+</h1>
 
-Setup and implementatio only takes a minute or two. You can try it on RunKit if you want a sample!
+Detect when a user's system color scheme has changed, allowing your site to change virtually simultaneously, making them feel right at home. Setup and implementation only takes a minute or two.  
+
+<div align="center">
+  
+[![yarn add @nberlette/color-scheme-change][yarn-image]][yarn-url] [![npm install @nberlette/color-scheme-change][npm-image]][npm-url] [![Try on RunKit!][runkit-image3]][runkit-url]   
+</div>
 
 - - -
 
-## 💿 Installation
+## `💿  Installation`
 
-  [![yarn add @nberlette/color-scheme-change][yarn-image]](https://yarnpkg.com/packages/@nberlette/color-scheme-change) [![npm install @nberlette/color-scheme-change][npm-image]][npm-url]
+### [Yarn](https://yarnpkg.com) (highly recommended)
 
-<div style="width: 49%; float: left;">
-
-```sh
+```bash
 yarn add @nberlette/color-scheme-change
 ```
 
-</div>
+### [NPM](https://npmjs.com)
 
-<div style="margin-left: 51%;">
-
-```sh
-npm install --save @nberlette/color-scheme-change
+```bash
+# shorthand for `npm install --save`, saves to dependencies.
+npm i -S @nberlette/color-scheme-change
 ```
 
-<!-- [![npm install @nberlette/color-scheme-change][npm-image]][npm-url] -->
+- - -   
 
-</div>
+## `Usage and Examples`
 
-> I highly recommend switching to Yarn for your package management if you haven't already.
+Both CommonJS `require` and ECMAscript `import` are supported.
 
-<br clear="all">
+### `🟨  ES Module (import, .mjs)`
 
-
-## 🟨 ES6 Usage (browser)
+##### _"Named" import_
 
 ```js
 import { colorSchemeChange } from '@nberlette/color-scheme-change'
 
-colorSchemeChange(theme => console.log(`User's color scheme: ${theme}`))
+colorSchemeChange((theme) => console.log(`[named] color scheme: ${theme}`))
 ```
 
+##### _"Aliased" import_
 
-## 🟩 CommonJS Usage (Node.js)
+This is preferred over default imports, and has essentially the same effect. You can name it whatever you like.
+
+```js
+import { colorSchemeChange as onScheme } from '@nberlette/color-scheme-change'
+
+onScheme((theme) => console.log(`[aliased] color scheme: ${theme}`))
+```
+
+> ***Note***: `@nberlette/color-scheme-change` will work with *both* default and named ES imports.
+> That being said, the official ECMA specification now recommends ***named imports*** whenever possible.
+
+##### _"Default" import_
+
+```js
+import colorSchemeChange from '@nberlette/color-scheme-change'
+
+colorSchemeChange((theme) => console.log(`[default] color scheme: ${theme}`))
+```
+
+- - -    
+
+### `🟩  CommonJS Module (require, .cjs)`
+
+##### Recommended import (Object Destructuring)
 
 ```js
 const { colorSchemeChange } = require('@nberlette/color-scheme-change')
 
-colorSchemeChange(theme => console.log(`User's color scheme: ${theme}`))
+colorSchemeChange((theme) => console.log(`[colorSchemeChange]: ${theme}`))
 ```
 
-## 🟪 [Try it on RunKit!][runkit-url]
+##### Alternative: aliased method name
+```js
+const { colorSchemeChange: onScheme } = require('@nberlette/color-scheme-change')
 
-[![Try @nberlette/color-scheme-change on RunKit][runkit-image]][runkit-url]
+onScheme((theme) => console.log(`[onScheme] color scheme: ${theme}`))
+```
+
+##### Default import
+
+```js
+const colorSchemeChange = require('@nberlette/color-scheme-change').default
+
+colorSchemeChange((theme) => console.log(`[colorSchemeChange]: ${theme}`))
+```
 
 - - -
 
 ## API
 
-<details>
+### `remove = colorSchemeChange(onChange)`
+
+Listen for changes to the system color scheme in the web browser. Detect when
+the system switches between Light Mode and Dark Mode.
+
+### `onChange`
+
+A callback function of the following form: `function(colorScheme) {}` where
+`colorScheme` is either `'light'` or `'dark'`. The function is called whenever
+the system enters Light Mode or Dark Mode, respectively.
+
+### `remove`
+
+When the returned `remove` function is called, all event listeners are cleaned
+up and the `onChange` function will no longer be called when the system color
+scheme changes.
+
+- - - 
+
+<!-- <details>
 <summary><code>remove = colorSchemeChange(onChange)</code></summary>
 
 Listen for changes to the system color scheme in the web browser. Detect when
@@ -82,16 +138,22 @@ When the returned `remove` function is called, all event listeners are cleaned
 up and the `onChange` function will no longer be called when the system color
 scheme changes.
 
-</details>
+</details> -->
 
-- - -
+<!-- - - - -->
 
-### MIT © 2021 [Nicholas Berlette](https://berlette.com) • original by [@feross](https://feross.org)  
+##### © 2021 [Nicholas Berlette](https://nick.berlette.com) • [v1.0.x](https://github.com/feross/color-scheme-change) © [feross](https://feross.org) • [MIT License](https://nick.mit-license.org)
 
 <!-- [npm-image]: https://nodei.co/npm/@nberlette/color-scheme-change.png?mini=true -->
-[npm-image]: https://img.shields.io/badge/npm%20install%20-%20init%E2%80%90package%E2%80%90json-red?style=for-the-badge&logo=npm
+
+[npm-image]: https://img.shields.io/badge/-npm%20i%20--S%20%40nberlette%2Fcolor%E2%80%90scheme%E2%80%90change-red?labelColor=565656&style=for-the-badge&logo=npm
+[npm-image2]: https://img.shields.io/badge/npm%20i%20--S%20-%40nberlette%2Fcolor--scheme--change-red?style=for-the-badge&logo=npm
+[yarn-image]: https://img.shields.io/badge/-yarn%20add%20%40nberlette%2Fcolor--scheme--change-9cf?labelColor=565656&logo=yarn&style=for-the-badge
+[yarn-image2]: https://img.shields.io/badge/yarn%20add-%40nberlette%2Fcolor--scheme--change-9cf?labelColor=444444&logo=yarn&style=for-the-badge
+[runkit-image]: https://badge.runkitcdn.com/@nberlette/color-scheme-change.svg?style=social
+[runkit-image2]: https://img.shields.io/badge/try%20on%20runkit-%40nberlette%2Fcolor--scheme--change-ff69b4?style=for-the-badge&logo=runkit&logoColor=ff69b4
+[runkit-image3]: https://img.shields.io/badge/Try-%20on%20RunKit-ff69b4?style=for-the-badge&logo=runkit&logoColor=ff69b4
+
 [npm-url]: https://npmjs.org/package/@nberlette/color-scheme-change
-[yarn-image]: https://img.shields.io/badge/yarn%20add-%40nberlette%2Fcolor--scheme--change-9cf?labelColor=444444&logo=yarn&style=for-the-badge
-[runkit-image]: https://img.shields.io/badge/try%20on%20runkit-%40nberlette%2Fcolor--scheme--change-ff69b4?style=for-the-badge&logo=runkit&logoColor=ff69b4
-<!-- https://badge.runkitcdn.com/@nberlette/color-scheme-change.svg --> -->
+[yarn-url]: https://yarnpkg.com/packages/@nberlette/color-scheme-change
 [runkit-url]: https://npm.runkit.com/@nberlette/color-scheme-change
